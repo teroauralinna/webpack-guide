@@ -1,11 +1,11 @@
 import './Text.css'
 
 class Text {
-  create(text) {
+  create(container, text) {
     const p = document.createElement('p');
     p.innerText = text
     p.className = 'text'
-    document.body.appendChild(p);
+    container.appendChild(p);
   }
 }
 

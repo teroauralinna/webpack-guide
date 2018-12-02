@@ -1,0 +1,11 @@
+@import '../../scss/variables';
+
+.linktext {
+  text-align: center;
+}
+.linktext__link {
+  color: $primary-color;
+  &:hover {
+    color: darken($primary-color, 20)
+  }
+}

@@ -1,11 +1,11 @@
 import './Header.css'
 
 class Header {
-  create(header) {
-    const h1 = document.createElement('h1');
-    h1.innerText = header
+  create(container, headerText) {
+    const h1 = document.createElement('h1')
+    h1.innerText = headerText
     h1.className = 'header'
-    document.body.appendChild(h1);
+    container.appendChild(h1)
   }
 }
 

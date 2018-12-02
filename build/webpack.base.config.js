@@ -1,21 +1,13 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
   entry: './src/app',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'app.[contenthash:8].js',
     publicPath: '/'
-  },
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin(),
-      new OptimizeCSSAssetsPlugin()
-    ]
   },
   module: {
     rules: [
@@ -64,14 +56,14 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@components': path.resolve(__dirname, 'src/components'),
-      '@scss': path.resolve(__dirname, 'src/scss'),
-      '@img': path.resolve(__dirname, 'src/img'),
-      '@': path.resolve(__dirname, 'src')
+      '@components': path.resolve(__dirname, '../src/components'),
+      '@scss': path.resolve(__dirname, '../src/scss'),
+      '@img': path.resolve(__dirname, '../src/img'),
+      '@': path.resolve(__dirname, '../src')
     },
     modules: [
       'node_modules',
-      path.resolve(__dirname, 'src')
+      path.resolve(__dirname, '../src')
     ],
     extensions: ['.js', '.ts'],
   },

@@ -1,11 +1,13 @@
 import header from './header/Header'
 import text from './text/Text'
-import svgIcon from './svgIcon/SvgIcon'
+import image from './image/Image'
 import link from './link/Link'
+import container from './container/Container'
 
 export {
   header,
   text,
   link,
-  svgIcon
+  image,
+  container
 }
